@@ -3,6 +3,7 @@ django-admin startproject password_generator
 
 Create venv Windows:
 py -3 -m venv .venv
+Start venv:
 .venv\scripts\activate
 
 Update and install:
