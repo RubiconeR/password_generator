@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <style>
+        .normal {border: 1px;}
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<div class="container text-center">
+    <h1>Password Generator</h1>
+</div>
+<div class="container text-center">
+    <form action="{% url 'password' %}">
+        <select name="length">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected="selected">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select> Длина
+        <br>
+        <input class="normal" type="checkbox" name="uppercase"> Верхний регистр
+        <br>
+        <input type="checkbox" name="numbers" class="normal"> Цифры
+        <br>
+        <input type="checkbox" name="special" class="normal"> Специальные символы
+        <br>
+        <input type="submit" value="Генерация пароля" class="btn btn-warning">
+    </form>
+    <br>
+    <a href="{% url 'about' %}" class="btn btn-dark">About</a>
+</div>
+</body>
+
+</html>
